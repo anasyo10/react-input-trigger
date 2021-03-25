@@ -1,0 +1,69 @@
+{
+  "name": "react-input-trigger",
+  "description": "React component for handling character triggers inside textareas and input fields. 🐼",
+  "version": "2.0.0-beta-7",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "repository": "git@github.com:abinavseelan/react-input-trigger.git",
+  "author": "Abinav Seelan <abinav.n.seelan@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "docs/website",
+    "."
+  ],
+  "scripts": {
+    "start": "cd docs/website && npm run start",
+    "prebuild": "npm run clean",
+    "prepublishOnly": "npm run build",
+    "build": "NODE_ENV=production rollup -c rollup.config.js",
+    "build:docs": "cd docs/website && npm install && npm run build",
+    "test": "jest",
+    "lint": "echo '🔍   Running linter in fix mode' && eslint . --fix",
+    "lint:no-fix": "echo '🔍   Running linter' && eslint .",
+    "success": "echo '✅   Done! 🎉'",
+    "clean": "rimraf dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "@rollup/plugin-typescript": "^4.1.2",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.7",
+    "@types/textarea-caret": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.7",
+    "prettier": "^2.0.5",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.11.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "textarea-caret": "^3.1.0"
+  },
+  "peerDependencies": {
+    "prop-types": ">=15.6.1",
+    "react": ">=15.6.1"
+  },
+  "contributors": [
+    {
+      "name": "Aditi Mohanty",
+      "email": "aditi.anomita@gmail.com",
+      "url": "https://aditimohanty.com/"
+    }
+  ]
+}
